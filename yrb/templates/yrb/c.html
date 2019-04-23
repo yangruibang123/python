@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>京东爬取</title>
+    <style type="text/css">
+        table {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center">京东</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>图片网址</th>
+                <th>书名</th>
+                <th>价格</th>
+                <th>评价条数</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in data %}
+                <tr>
+                    <td>{{data.img}}</td>
+                    <td>{{data.title}}</td>
+                    <td>{{data.price}}</td>
+                    <td>{{data.commit}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <input type="button" value="返回首页" onclick="window.location.href='http://localhost:8000/yrb'"/>
+</body>
+
+</html>

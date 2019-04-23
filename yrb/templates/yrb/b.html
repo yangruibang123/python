@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>豆瓣爬取</title>
+    <style type="text/css">
+        table {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center">豆瓣</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>排行</th>
+                <th>图片网址</th>
+                <th>影片名</th>
+                <th>导演</th>
+                <th>主演</th>
+                <th>上映日期</th>
+                <th>制片国家/地区</th>
+                <th>类型</th>
+                <th>评分</th>
+                <th>评价人数</th>
+                <th>评价</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in data %}
+                <tr>
+                    <td>{{data.myranking}}</td>
+                    <td>{{data.myimg}}</td>
+                    <td>{{data.mytitle}}</td>
+                    <td>{{data.mydirector}}</td>
+                    <td>{{data.mystar}}</td>
+                    <td>{{data.mytime}}</td>
+                    <td>{{data.myadress}}</td>
+                    <td>{{data.mymovie_type}}</td>
+                    <td>{{data.myscore}}</td>
+                    <td>{{data.mynumber}}</td>
+                    <td>{{data.myevaluate}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <input type="button" value="返回首页" onclick="window.location.href='http://localhost:8000/yrb'"/>
+</body>
+
+</html>
